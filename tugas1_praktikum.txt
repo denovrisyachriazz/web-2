@@ -1,0 +1,29 @@
+Denovri Syachriaziiz Pribadi, [20/02/2025 18:55]
+1. Jelaskan apa yang dimaksud dengan dokumen root?
+Dokumen root adalah direktori utama tempat server web mencari file yang akan ditampilkan ketika pengguna mengakses sebuah situs. Dalam konteks server web, dokumen root adalah folder tempat file HTML, CSS, JavaScript, dan file lainnya disimpan agar dapat diakses oleh pengunjung melalui URL.
+
+2. Pada Apache web server, apakah dokumen root harus terletak dalam direktori C:\xampp\htdocs? Jelaskan jawaban Anda.g
+Secara default, Apache dalam XAMPP menggunakan C:\xampp\htdocs sebagai dokumen root. Namun, dokumen root ini bisa diubah dengan mengedit file konfigurasi Apache (httpd.conf) dan mengatur direktori lain sebagai root, misalnya untuk meng-host proyek dari lokasi yang berbeda.
+
+3. Jelaskan apa yang dimaksud dengan perintah Git berikut:
+init: Menginisialisasi repository Git baru di dalam sebuah direktori.
+clone: Membuat salinan dari repository Git yang sudah ada.
+remote: Mengelola repository jarak jauh (misalnya, menghubungkan repository lokal ke GitHub/GitLab).
+add: Menambahkan perubahan file ke dalam staging area sebelum dilakukan commit.
+commit: Menyimpan perubahan yang ada di staging area ke dalam repository dengan pesan tertentu.
+push: Mengunggah perubahan dari repository lokal ke repository jarak jauh.
+checkout: Berpindah antara branch atau versi yang berbeda dalam repository.
+
+4. Jelaskan perbedaan antara GitHub dan GitLab.
+GitHub dan GitLab adalah platform untuk manajemen repository Git, tetapi memiliki beberapa perbedaan:
+GitHub: Lebih populer dan digunakan oleh komunitas open source dengan fitur utama seperti pull request, issue tracking, dan GitHub Actions.
+GitLab: Memiliki fitur bawaan untuk CI/CD yang lebih kuat dan dapat di-host secara mandiri di server sendiri, sedangkan GitHub umumnya digunakan sebagai layanan berbasis cloud.
+
+5. Apa bedanya variable user dengan variable system?
+Variable user: Variabel lingkungan yang berlaku hanya untuk pengguna tertentu dalam sistem operasi.
+Variable system: Variabel yang berlaku secara global untuk semua pengguna dalam sistem operasi.
+
+6. Apa persamaan variable system dengan variable constant?
+Keduanya berisi nilai yang dapat digunakan oleh sistem atau program.
+Nilainya bisa digunakan untuk konfigurasi dan pengaturan sistem.
+Dalam beberapa kasus, variable system juga dapat bersifat konstan jika tidak diubah selama runtime.
