@@ -1,12 +1,13 @@
 <?php
 // Mengecek apakah request datang melalui POST, jika tidak, redirect ke form
-if ($_SERVER["REQUEST_METHOD"] != "POST") {
+if (!isset($_POST['submit'])) {
     header("Location: form-registrasi.php");
     exit;
 }
 
 // Mengambil data dari file proses-registrasi.php
-require_once 'proses-registrasi.php';
+require_once "proses-registrasi.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -28,52 +29,53 @@ require_once 'proses-registrasi.php';
                 <tr>
                     <td>NIM</td>
                     <td>:</td>
-                    <td><?= isset($nim) ? htmlspecialchars($nim) : 'N/A'; ?></td>
+                    <td>
+                        <?= $nim ?></td>
                 </tr>
                 <tr>
                     <td>Nama</td>
                     <td>:</td>
-                    <td><?= isset($nama) ? htmlspecialchars($nama) : 'N/A'; ?></td>
+                    <td><?= $nama ?></td>
                 </tr>
                 <tr>
                     <td>Jenis Kelamin</td>
                     <td>:</td>
-                    <td><?= isset($jk) ? htmlspecialchars($jk) : 'N/A'; ?></td>
+                    <td><?= $jk ?></td>
                 </tr>
                 <tr>
                     <td>Program Studi</td>
                     <td>:</td>
-                    <td><?= isset($prodi) ? htmlspecialchars($prodi) : 'N/A'; ?></td>
+                    <td><?= $prodi ?></td>
                 </tr>
                 <tr>
                     <td>Skill</td>
                     <td>:</td>
-                    <td><?= isset($skill_pilihan) ? htmlspecialchars(implode(", ", (array) $skill_pilihan)) : 'N/A'; ?></td>
+                    <td><?= implode(", ", $skill_pilihan) ?></td>
                 </tr>
                 <tr>
                     <td>Skor Skill</td>
                     <td>:</td>
-                    <td><?= isset($skor_skill) ? htmlspecialchars($skor_skill) : 'N/A'; ?></td>
+                    <td><?= $skor_skill ?></td>
                 </tr>
                 <tr>
                     <td>Kategori Skill</td>
                     <td>:</td>
-                    <td><?= isset($kategori_skill) ? htmlspecialchars($kategori_skill) : 'N/A'; ?></td>
+                    <td><?= $kategori_skill ?></td>
                 </tr>
                 <tr>
                     <td>Email</td>
                     <td>:</td>
-                    <td><?= isset($email) ? htmlspecialchars($email) : 'N/A'; ?></td>
+                    <td><?= $email ?></td>
                 </tr>
                 <tr>
                     <td>Domisili</td>
                     <td>:</td>
-                    <td><?= isset($domisili) ? htmlspecialchars($domisili) : 'N/A'; ?></td>
+                    <td><?= $domisili ?></td>
                 </tr>
             </tbody>
         </table>
         <div class="text-center my-3">
-            <a href="form-registrasi.php" class="btn btn-warning">Kembali</a>
+            <a href="form-register.php" class="btn btn-warning">Kembali</a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 

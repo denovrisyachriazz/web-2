@@ -2,13 +2,13 @@
 
 require_once "data-form-regis.php";
 
-$nim = isset($_POST['nim']) ? $_POST['nim'] : '';
-$nama = isset($_POST['nama_lengkap']) ? $_POST['nama_lengkap'] : '';
-$jk = isset($_POST['jenis_kelamin']) ? $_POST['jenis_kelamin'] : '';
-$prodi = isset($_POST['program_studi']) ? $_POST['program_studi'] : '';
-$skill_pilihan = isset($_POST['skills']) ? $_POST['skills'] : [];
-$email = isset($_POST['email']) ? $_POST['email'] : '';
-$domisili = isset($_POST['domisili']) ? $_POST['domisili'] : '';
+$nim = $_POST["nim"];
+$nama = $_POST["nama_lengkap"];
+$jk = $_POST["jenis_kelamin"];
+$prodi = $_POST["program_studi"];
+$skill_pilihan = $_POST["skills"];
+$email = $_POST["email"];
+$domisili = $_POST["domisili"];
 
 
 $skor_skill = skor_skill($skill_pilihan, $ar_skill);
